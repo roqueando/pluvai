@@ -1,0 +1,20 @@
+﻿services:
+  pluvai:
+    image: pluvai
+    build:
+      context: .
+      dockerfile: PluvAI/Dockerfile
+  feature_store:
+    image: mongo:latest
+    container_name: pluvius_feature_store
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: pluvai
+      MONGO_INITDB_ROOT_PASSWORD: pluvai_local_password
+    volumes:
+      - feature_store:/data/db
+        
+volumes:
+  feature_store:
+    driver: local

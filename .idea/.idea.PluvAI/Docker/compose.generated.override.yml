@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  pluvai:
+    build:
+      context: "/home/osogyian/RiderProjects/PluvAI"
+      dockerfile: "PluvAI/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/PluvAI.dll"
+    environment:
+      DOTNET_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "pluvai:dev"
+    ports: []
+    volumes:
+    - "/home/osogyian/RiderProjects/PluvAI/PluvAI:/app:rw"
+    - "/home/osogyian/RiderProjects/PluvAI:/src:rw"
+    - "/home/osogyian/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"
