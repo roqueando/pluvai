@@ -16,7 +16,5 @@ let getDataset =
         let! response = client.GetByteArrayAsync("https://portal.inmet.gov.br/uploads/dadoshistoricos/2019.zip")
             
         do! File.WriteAllBytesAsync(destination, response)
-       // if Directory.Exists(Path.Combine(folderArray[0..1])) then
-       // else
-       //     printf "\n data folder does not exists in your home! create one"
+        return destination
     }
