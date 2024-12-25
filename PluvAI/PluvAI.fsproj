@@ -17,6 +17,7 @@
       </Content>
       <Content Include="Dockerfile" />
       <Content Include="DEVELOPMENT.md" />
+      <Folder Include="data\" />
     </ItemGroup>
 
 </Project>

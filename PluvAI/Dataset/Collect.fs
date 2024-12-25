@@ -8,7 +8,7 @@ let getDataset =
         use client = new HttpClient()
         let! response =
             client.GetByteArrayAsync("https://portal.inmet.gov.br/uploads/dadoshistoricos/2019.zip")
-        do! File.WriteAllBytesAsync("./data/2019.zip", response)
+        do! File.WriteAllBytesAsync("./PluvAI/data/2019.zip", response)
     }
     |> Async.AwaitTask
     |> Async.RunSynchronously
