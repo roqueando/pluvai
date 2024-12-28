@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PluvAI", "PluvAI\PluvAI.fsproj", "{235A20C1-3716-406F-BD31-0C1D2DE13296}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F5317AFD-D531-461D-A7E2-77EBEE6C92CE}"
 	ProjectSection(SolutionItems) = preProject
 		compose.yaml = compose.yaml

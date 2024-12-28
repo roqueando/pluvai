@@ -2,12 +2,16 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
         <Compile Include="Collect.fs" />
-        <Compile Include="Program.fs"/>
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Deedle" Version="3.0.0" />
     </ItemGroup>
 
 </Project>

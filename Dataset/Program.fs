@@ -1,14 +1,16 @@
 ﻿open System
-open System.Threading.Tasks
 open Dataset.Collect
 
 [<EntryPoint>]
 let main _ =
     printfn "downloading dataset..."
+    
     getDataset
     |> Async.AwaitTask
     |> Async.RunSynchronously
+    |> extractFile
+    |> merge
      
-    printfn "download dataset... finished!"
+    printfn "dataset... collected!"
     Environment.Exit(0)
     0
