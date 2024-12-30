@@ -1,9 +1,8 @@
 ﻿services:
-  pluvai:
-    image: pluvai
+  feature_extractor:
     build:
       context: .
-      dockerfile: PluvAI/Dockerfile
+      dockerfile: FeatureExtractor/Dockerfile
   feature_store:
     image: mongo:latest
     container_name: pluvius_feature_store
@@ -18,3 +17,8 @@
 volumes:
   feature_store:
     driver: local
+  featureextractor:
+    image: featureextractor
+    build:
+      context: .
+      dockerfile: FeatureExtractor/Dockerfile

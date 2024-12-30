@@ -12,6 +12,8 @@
     
     <ItemGroup>
         <PackageReference Include="Deedle" Version="3.0.0" />
+        <PackageReference Include="Microsoft.Data.Analysis" Version="0.22.0" />
+        <PackageReference Include="Microsoft.ML" Version="4.0.0" />
     </ItemGroup>
 
 </Project>
